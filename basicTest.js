@@ -68,3 +68,67 @@ function changeName(){
 
 changeName();
 cat1.getCatInfo();
+
+
+
+
+
+
+
+//--------------------------------- selectors ---------------
+// document.getElementById("box").addEventListener("click", function() {
+//    if(document.getElementById("box").style.backgroundColor === "red"){
+//     document.getElementById("box").style.backgroundColor = "lightblue";
+//    } else{
+//     document.getElementById("box").style.backgroundColor = "red";
+//    }
+// })
+
+
+
+const box = document.getElementById("box");
+
+box.addEventListener("click", function() { 
+  const backgroundColor = box.style.backgroundColor;
+   //const {backgroundColor} = box.style;
+   
+    if(backgroundColor === "red"){
+      box.style.backgroundColor = "lightblue";
+    } else{
+     box.style.backgroundColor = "red";
+    }
+ })
+
+
+//  const myButton = document.getElementById("button");
+
+// myButton.addEventListener( "mouseenter",
+//     function(){
+//      if (myButton.classList.remove("hidden")){
+//       myButton.classList.add("visible")
+//      }
+//     },
+//     false,
+//   );
+
+
+//------------------ to do list ----------------
+
+function createToDo(){
+  const newToDoTest = document.getElementById("newToDoTest").value;
+ const newLi = document.createElement("li");
+ newLi.textContent = newToDoTest;
+ document.getElementById("todoList").appendChild(newLi);
+}
+
+document.getElementById("newToDoTest").addEventListener("keydown", function(){
+    if (event.key ==="Enter"){
+      createToDo();
+    }
+})
+
+document.getElementById("addToDo").addEventListener("click", function(){
+ // alert("test")
+  createToDo();
+
+})
