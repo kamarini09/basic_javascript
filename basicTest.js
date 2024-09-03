@@ -1,3 +1,5 @@
+import { Cat } from "./Cat.js"
+
 let name = 'Kamarini';
 const birthDate = new Date(1995, 4, 9);
 console.log(name);
@@ -51,3 +53,18 @@ const distance2 = calculator.getDinstance(30 , 20);
 console.log(`your distance is  ${distance2} `)
 
 
+//-------------------------- cat---------------------------
+
+const cat1 = new Cat( 'Emma' , 'Blue' , 'Fankie')
+cat1.getCatInfo();
+
+
+//change name
+function changeName(){
+    cat1.name = 'Clara'
+    console.log(cat1.name)
+}
+
+
+changeName();
+cat1.getCatInfo();
