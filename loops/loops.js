@@ -57,7 +57,7 @@ book.forEach((x) => {
 //Create a function, findLargest, that takes 4 numbers as 4 parameters
 //and returns the largest of the 4 numbers.
 
-//you can also use math.max
+//you can also use math.max but went the hard logic way
 const largest = (num1, num2, num3, num4) => {
   if (num1 >= num2 && num1 >= num3 && num1 >= num4) {
     return num1;
@@ -89,5 +89,32 @@ const myFunction = (num1, num2, num3) => {
 };
 
 console.log(myFunction(40, 100, 20));
+console.log(myFunction(4, 10, 20));
+console.log(myFunction(25, 30, 20));
 
 //----------------------------exercise: higher or lower --------------------------------------
+
+//randomly select a number btw 1-100
+const randomNumber = Math.floor(Math.random() * (100 - 1) + 1);
+console.log("The random number is : " + randomNumber);
+let attempts = 0;
+
+function checkTheNumber() {
+  const userNumber = document.getElementById("addNumber").value;
+  console.log(userNumber);
+  attempts++;
+  if (userNumber > randomNumber) {
+    console.log("your number is higher than the random number. Try again! ");
+  } else if (userNumber < randomNumber) {
+    console.log("your number is lower than the random number. Try again! ");
+  } else {
+    console.log(
+      `You are correct!! It took you ${attempts} attempts to guess the correct number.`
+    );
+  }
+}
+
+document.getElementById("checkNumber").addEventListener("click", function () {
+  // alert("test")
+  checkTheNumber();
+});
