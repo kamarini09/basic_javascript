@@ -101,13 +101,20 @@ let attempts = 0;
 
 function checkTheNumber() {
   const userNumber = document.getElementById("addNumber").value;
+  const message = document.getElementById("message");
   console.log(userNumber);
   attempts++;
   if (userNumber > randomNumber) {
+    message.textContent =
+      "Your number is higher than the random number. Try again! ";
     console.log("your number is higher than the random number. Try again! ");
   } else if (userNumber < randomNumber) {
+    message.textContent =
+      "Your number is lower than the random number. Try again! ";
     console.log("your number is lower than the random number. Try again! ");
   } else {
+    message.textContent = `You are correct!! It took you ${attempts} attempts to guess the correct number.`;
+
     console.log(
       `You are correct!! It took you ${attempts} attempts to guess the correct number.`
     );
