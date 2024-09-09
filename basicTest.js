@@ -81,6 +81,58 @@ console.log(car1.start());
 console.log(car2.start());
 console.log(car1.stop());
 console.log(car2.stop());
+console.log("----------------------------------");
+
+//-------------------------------EXERCISE: ARRAYS---------------------------------
+const names = ["Maria", "Amine", "Louisa", "Emil", "Anna"];
+console.log(names[0]);
+console.log(names.indexOf("Amine"));
+console.log(names.indexOf("Kamarini"));
+
+names.push("Sarah");
+console.log(names);
+
+const names2 = names.slice(0, 3);
+console.log(names2);
+
+const firstPerson = {
+  firstname: "Jonas",
+  lastname: "Erriksen",
+  email: "jonaser@gmail.dk",
+};
+
+const secondPerson = {
+  firstname: "Emil",
+  lastname: "Flue",
+  email: "emilflue@gmail.dk",
+};
+
+const People = [firstPerson, secondPerson];
+console.log(People);
+console.log(People[0].email);
+console.log("----------------------------------");
+
+//----------------Student Grades Management-------------------
+
+const Student = {
+  studentName: "Rasmus",
+  id: 12345,
+  grades: [7, 12, 4],
+};
+
+function addGrade(student, grade) {
+  Student.grades.push(grade);
+}
+addGrade(Student, 12);
+console.log(`The new grades of ${Student.studentName} are : ${Student.grades}`);
+
+function updateStudentName(Student, newName) {
+  Student.studentName = newName;
+}
+
+updateStudentName(Student, "Jens");
+console.log(`The student name is now updated to: ${Student.studentName}`);
+console.log("----------------------------------");
 
 //--------------------------------- selectors ---------------
 // document.getElementById("box").addEventListener("click", function() {
