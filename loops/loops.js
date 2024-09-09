@@ -52,6 +52,7 @@ book.forEach((x) => {
   }`;
   bookList.appendChild(li);
 });
+console.log("-------------------------------------");
 
 //----------------------------- if else -------------------------------
 //Create a function, findLargest, that takes 4 numbers as 4 parameters
@@ -70,7 +71,8 @@ const largest = (num1, num2, num3, num4) => {
   }
 };
 
-console.log(largest(1, 2, 3, 4));
+console.log("The largest number of the 4 is: " + largest(1, 2, 3, 7));
+console.log("-------------------------------------");
 
 //------------------------------------------------------------------
 //Create a function that takes 3 numbers as 3 parameters. The first parameter
@@ -91,6 +93,8 @@ const myFunction = (num1, num2, num3) => {
 console.log(myFunction(40, 100, 20));
 console.log(myFunction(4, 10, 20));
 console.log(myFunction(25, 30, 20));
+
+console.log("-------------------------------------");
 
 //----------------------------exercise: higher or lower --------------------------------------
 
