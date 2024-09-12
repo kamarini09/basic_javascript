@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+img.duck {
+  width: 350px;
+  margin-top: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+img.duck:hover {
+  content: url("duck_hover.jpeg");
+  transform: scale(1.1);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block-start: 2rem;
+  gap: 1rem;
+}
