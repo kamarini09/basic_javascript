@@ -1,3 +1,8 @@
+//ask and dispay the user's name
+const userName = prompt("What is your name?");
+const sayHi = document.getElementById("sayHi");
+sayHi.textContent = `Hi ${userName} ! So excited to see you!`;
+
 const duck = document.querySelector(".duck");
 
 //logs for hovering
