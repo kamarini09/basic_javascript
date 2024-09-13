@@ -1,7 +1,7 @@
 //ask and dispay the user's name
-const userName = prompt("What is your name?");
-const sayHi = document.getElementById("sayHi");
-sayHi.textContent = `Hi ${userName} ! So excited to see you!`;
+// const userName = prompt("What is your name?");
+// const sayHi = document.getElementById("sayHi");
+// sayHi.textContent = `Hi ${userName} ! So excited to see you!`;
 
 const duck = document.querySelector(".duck");
 
@@ -32,7 +32,9 @@ function displayMessages() {
   const messages = loadMessages();
 
   messages.forEach((message) => {
+    const now = new Date("2024-09-13");
     const li = document.createElement("li");
+    li.title = `${now}`;
     li.textContent = message;
     messageList.appendChild(li);
   });
@@ -54,3 +56,5 @@ submitBtn.addEventListener("click", function () {
   }
   console.log(problemInput);
 });
+
+//---------------------------date-----------------------------
