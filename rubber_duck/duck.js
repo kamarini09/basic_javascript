@@ -46,7 +46,13 @@ const submitBtn = document.getElementById("submitBtn");
 
 submitBtn.addEventListener("click", function () {
   const problemInput = document.getElementById("problemInput").value;
-
+  fetch("http://localhost:3000", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ problem: problemInput }),
+  });
   if (problemInput) {
     const messages = loadMessages();
     messages.push(problemInput);
